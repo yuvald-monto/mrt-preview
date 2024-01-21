@@ -178,6 +178,7 @@ import MaterialReactTable, {
           onIsFullScreenChange={onIsFullScreenChange}
           enableRowVirtualization
           rowVirtualizerInstanceRef={rowVirtualizedInstanceRef}
+          // @ts-ignore
           muiTableBodyRowProps={({ row }) => ({
             onClick: () => onRowClick && onRowClick(row),
             sx: { cursor: "pointer", fontSize: "0.875rem" },
