@@ -5,7 +5,7 @@ import MaterialReactTable, {
   import * as React from "react";
   import { useEffect, useRef } from "react";
   import { useRouter } from "next/router";
-//   import { SortingStoreKey, useSortingStore } from "@stores/TablesStore";
+  import { useSortingStore } from "../stores/TablesStore";
   
   export const TableRMT = ({
     data,
@@ -19,7 +19,6 @@ import MaterialReactTable, {
     data: any;
     columns: MRT_ColumnDef<any>[];
     tableSortKey: string;
-    // tableSortKey: SortingStoreKey;
     isLoading: boolean;
     onRowClick?: (row: any) => void;
     showCheckboxSelection?: boolean;
@@ -44,7 +43,7 @@ import MaterialReactTable, {
       density,
     } = useStore();
   
-    const onRowSelectionChange = (updaterOrValue) => {
+    const onRowSelectionChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(rowSelection)
@@ -53,7 +52,7 @@ import MaterialReactTable, {
       setStore({ rowSelection: value });
     };
   
-    const onColumnFiltersChange = (updaterOrValue) => {
+    const onColumnFiltersChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnFilters)
@@ -62,7 +61,7 @@ import MaterialReactTable, {
       setStore({ columnFilters: value });
     };
   
-    const onSortingChange = (updaterOrValue) => {
+    const onSortingChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(sorting)
@@ -70,21 +69,21 @@ import MaterialReactTable, {
   
       setStore({ sorting: value });
     };
-    const onGroupingChange = (updaterOrValue) => {
+    const onGroupingChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(grouping)
           : updaterOrValue;
       setStore({ grouping: value });
     };
-    const onExpandedChange = (updaterOrValue) => {
+    const onExpandedChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(expanded)
           : updaterOrValue;
       setStore({ expanded: value });
     };
-    const onColumnPinningChange = (updaterOrValue) => {
+    const onColumnPinningChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnPinning)
@@ -93,7 +92,7 @@ import MaterialReactTable, {
       setStore({ columnPinning: value });
     };
   
-    const onColumnVisibilityChange = (updaterOrValue) => {
+    const onColumnVisibilityChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnVisibility)
@@ -102,7 +101,7 @@ import MaterialReactTable, {
       setStore({ columnVisibility: value });
     };
   
-    const onIsFullScreenChange = (updaterOrValue) => {
+    const onIsFullScreenChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnFilters)
@@ -111,7 +110,7 @@ import MaterialReactTable, {
       setStore({ isFullScreen: value });
     };
   
-    const onGlobalFilterChange = (updaterOrValue) => {
+    const onGlobalFilterChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnFilters)
@@ -120,7 +119,7 @@ import MaterialReactTable, {
       setStore({ searchValue: value });
     };
   
-    const onShowGlobalFilterChange = (updaterOrValue) => {
+    const onShowGlobalFilterChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnFilters)
@@ -129,7 +128,7 @@ import MaterialReactTable, {
       setStore({ globalFilterChange: value });
     };
   
-    const onDensityChange = (updaterOrValue) => {
+    const onDensityChange = (updaterOrValue: any) => {
       const value =
         updaterOrValue instanceof Function
           ? updaterOrValue(columnFilters)
