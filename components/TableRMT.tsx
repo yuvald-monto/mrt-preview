@@ -1,6 +1,7 @@
-import MaterialReactTable, {
+import  {
+  MaterialReactTable,
     MRT_ColumnDef,
-    MRT_Virtualizer,
+    MRT_RowVirtualizer,
   } from "material-react-table";
   import * as React from "react";
   import { useEffect, useRef } from "react";
@@ -27,7 +28,7 @@ import MaterialReactTable, {
     const router = useRouter();
     const { useStore, setStore } = useSortingStore(tableSortKey);
     const rowVirtualizedInstanceRef =
-      useRef<MRT_Virtualizer<HTMLDivElement, HTMLTableRowElement>>(null);
+      useRef<MRT_RowVirtualizer<HTMLDivElement, HTMLTableRowElement>>(null);
     const {
       columnFilters,
       sorting,
@@ -205,7 +206,7 @@ import MaterialReactTable, {
               color: "#626264",
             },
           }}
-          muiTablePaginationProps={{
+          muiPaginationProps={{
             rowsPerPageOptions: [],
             // @ts-ignore
             rowsPerPage: -1,
