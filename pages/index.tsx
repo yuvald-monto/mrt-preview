@@ -19,7 +19,55 @@ const columns: MRT_ColumnDef<any>[] = [
   }, {
     accessorKey: "lastName",
     header: "Last Name",
-  }
+  },
+  {
+    accessorKey: "employeeNumber",
+    header: "Employee Number",
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+  },
+  {
+    accessorKey: "phone",
+    header: "Phone",
+  },
+  {
+    accessorKey: "department",
+    header: "Department",
+  },
+  {
+    accessorKey: "jobTitle",
+    header: "Job Title",
+  },
+  {
+    accessorKey: "location",
+    header: "Location",
+  },
+  {
+    accessorKey: "hireDate",
+    header: "Hire Date",
+  },
+  {
+    accessorKey: "terminationDate",
+    header: "Termination Date",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+  },
+  {
+    accessorKey: "payType",
+    header: "Pay Type",
+  },
+  {
+    accessorKey: "payRate",
+    header: "Pay Rate",
+  },
+  {
+    accessorKey: "payFrequency",
+    header: "Pay Frequency",
+  },
 ]
 
 

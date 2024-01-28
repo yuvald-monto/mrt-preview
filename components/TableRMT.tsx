@@ -187,7 +187,7 @@ import  {
           muiTableContainerProps={{
             sx: {
               maxHeight: "70vh",
-              maxWidth: "850vw",
+              maxWidth: "85vw",
               "&::-webkit-scrollbar": {
                 width: "10px",
               },
